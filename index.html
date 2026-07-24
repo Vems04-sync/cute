@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌸 KawaiiWorld — Cute & Modern ✨</title>
+  <meta name="description"
+    content="Website kawaii paling imut & modern! Sanrio, kucing, panda, refreshing vibes — tempat healing terbaik~" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lav: { 50: '#faf5ff', 100: '#f3e8ff', 200: '#e9d5ff', 300: '#d8b4fe', 400: '#c084fc', 500: '#a855f7', 600: '#9333ea', 700: '#7e22ce', 800: '#6b21a8' },
+            blush: { 100: '#ffe4f0', 200: '#ffc2de', 300: '#ff9ec8', 400: '#ff6eb6', 500: '#e91e8c' },
+            mint: { 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7' },
+            peach: { 100: '#fff1e6', 200: '#ffd6b0', 300: '#ffb77a' },
+            sky: { 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd' },
+            gold: { 100: '#fffbeb', 200: '#fde68a', 300: '#fbbf24' },
+          },
+          fontFamily: {
+            nunito: ['Nunito', 'sans-serif'],
+            pacifico: ['Pacifico', 'cursive'],
+            quicksand: ['Quicksand', 'sans-serif'],
+          },
+          animation: {
+            'float': 'floatY 3s ease-in-out infinite',
+            'float2': 'floatY 3.7s ease-in-out infinite 0.6s',
+            'float3': 'floatY 4.2s ease-in-out infinite 1.2s',
+            'wiggle': 'wiggle 1.2s ease-in-out infinite',
+            'spin-slow': 'spin 8s linear infinite',
+            'spin-rev': 'spinRev 6s linear infinite',
+            'pulse-soft': 'pulseSoft 2.5s ease-in-out infinite',
+            'heartbeat': 'heartbeat 1.6s ease-in-out infinite',
+            'twinkle': 'twinkle 2s ease-in-out infinite',
+            'slide-up': 'slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
+            'pop-in': 'popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards',
+            'shimmer': 'shimmer 2.5s linear infinite',
+            'bounce-cute': 'bounceCute 0.8s ease-in-out infinite',
+            'rotate-slow': 'rotateSlow 12s linear infinite',
+          },
+          keyframes: {
+            floatY: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-14px)' } },
+            wiggle: { '0%,100%': { transform: 'rotate(-6deg) scale(1)' }, '50%': { transform: 'rotate(6deg) scale(1.05)' } },
+            spinRev: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(-360deg)' } },
+            pulseSoft: { '0%,100%': { opacity: '1', transform: 'scale(1)' }, '50%': { opacity: '0.75', transform: 'scale(0.97)' } },
+            heartbeat: { '0%,100%': { transform: 'scale(1)' }, '14%': { transform: 'scale(1.2)' }, '28%': { transform: 'scale(1)' }, '42%': { transform: 'scale(1.12)' }, '70%': { transform: 'scale(1)' } },
+            twinkle: { '0%,100%': { opacity: '1', transform: 'scale(1) rotate(0deg)' }, '50%': { opacity: '0.3', transform: 'scale(0.7) rotate(20deg)' } },
+            slideUp: { '0%': { opacity: '0', transform: 'translateY(40px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            popIn: { '0%': { opacity: '0', transform: 'scale(0.5)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+            shimmer: { '0%': { backgroundPosition: '200% 0' }, '100%': { backgroundPosition: '-200% 0' } },
+            bounceCute: { '0%,100%': { transform: 'translateY(0) scale(1)' }, '50%': { transform: 'translateY(-8px) scale(1.05)' } },
+            rotateSlow: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ========== BASE ========== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #faf5ff;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ========== CUSTOM CURSOR ========== */
+    #cursor {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #f472b6 0%, #c084fc 60%, transparent 100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      pointer-events: none;
+      transition: transform 0.15s ease, width 0.2s, height 0.2s;
+      mix-blend-mode: multiply;
+    }
+
+    #cursor-trail {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c084fc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99998;
+      pointer-events: none;
+      transition: transform 0.35s ease;
+      opacity: 0.5;
+    }
+
+    a:hover~#cursor,
+    button:hover~#cursor {
+      transform: scale(1.8);
+    }
+
+    /* ========== SCROLLBAR ========== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f3e8ff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #e879f9, #a855f7, #ec4899);
+      border-radius: 99px;
+    }
+
+    /* ========== GLASS ========== */
+    .glass {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1.5px solid rgba(200, 140, 252, 0.3);
+    }
+
+    .glass-dark {
+      background: rgba(109, 40, 217, 0.12);
+      backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(192, 132, 252, 0.35);
+    }
+
+    /* ========== GRADIENT TEXT ========== */
+    .gtext {
+      background: linear-gradient(135deg, #a855f7 0%, #ec4899 45%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gtext2 {
+      background: linear-gradient(135deg, #7c3aed, #db2777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ========== SHIMMER BUTTON ========== */
+    .shimmer-btn {
+      background: linear-gradient(110deg, #a855f7 0%, #ec4899 30%, #f59e0b 50%, #ec4899 70%, #a855f7 100%);
+      background-size: 300% 100%;
+      animation: shimmer 3s linear infinite;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .shimmer-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 40px rgba(168, 85, 247, 0.5);
+    }
+
+    .shimmer-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* ========== NAV ========== */
+    .nav-glass {
+      background: rgba(250, 245, 255, 0.82);
+      backdrop-filter: blur(24px) saturate(200%);
+      border-bottom: 1px solid rgba(216, 180, 254, 0.4);
+    }
+
+    /* ========== HERO ========== */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 30%, rgba(232, 121, 249, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 90% 70%, rgba(168, 85, 247, 0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 50% 10%, rgba(244, 114, 182, 0.15) 0%, transparent 60%),
+        linear-gradient(160deg, #faf5ff 0%, #f3e8ff 40%, #fce7f3 70%, #faf5ff 100%);
+    }
+
+    /* ========== CARD HOVER ========== */
+    .card-hover {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-10px) scale(1.025) rotate(0.5deg);
+      box-shadow: 0 25px 60px rgba(168, 85, 247, 0.28), 0 0 0 2px rgba(200, 130, 252, 0.4);
+    }
+
+    .card-hover:nth-child(even):hover {
+      transform: translateY(-10px) scale(1.025) rotate(-0.5deg);
+    }
+
+    /* ========== PHOTO FRAME ========== */
+    .polaroid {
+      background: white;
+      padding: 14px 14px 48px;
+      border-radius: 6px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s;
+    }
+
+    .polaroid:hover {
+      box-shadow: 0 24px 64px rgba(168, 85, 247, 0.35), 0 0 0 3px #c084fc;
+    }
+
+    /* ========== NEON GLOW ========== */
+    .neon-purple {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.25);
+    }
+
+    .neon-pink {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(236, 72, 153, 0.25);
+    }
+
+    .neon-text {
+      text-shadow: 0 0 20px rgba(168, 85, 247, 0.7), 0 0 40px rgba(236, 72, 153, 0.4);
+    }
+
+    /* ========== RAINBOW BORDER ========== */
+    .rainbow-anim {
+      border: 3px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+
+    .rainbow-anim::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: inherit;
+      background: linear-gradient(var(--deg, 0deg), #c084fc, #f472b6, #fbbf24, #34d399, #60a5fa, #c084fc);
+      z-index: -1;
+      animation: rotateDeg 3s linear infinite;
+    }
+
+    @keyframes rotateDeg {
+      to {
+        --deg: 360deg;
+      }
+    }
+
+    @property --deg {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    /* ========== PARTICLES ========== */
+    .particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      animation: particleRise linear forwards;
+      opacity: 0;
+    }
+
+    @keyframes particleRise {
+      0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg) scale(0.5);
+      }
+
+      10% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.6;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-110vh) rotate(720deg) scale(1.2);
+      }
+    }
+
+    /* ========== STICKER ========== */
+    .sticker {
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .sticker:hover {
+      transform: scale(1.4) rotate(-12deg);
+    }
+
+    .sticker:active {
+      transform: scale(0.85);
+    }
+
+    /* ========== MODAL ========== */
+    .modal-wrap {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(15, 5, 30, 0.75);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-wrap.open {
+      display: flex;
+    }
+
+    .modal-img {
+      max-width: min(90vw, 500px);
+      max-height: 88vh;
+      border-radius: 20px;
+      border: 4px solid #c084fc;
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.6), 0 0 120px rgba(236, 72, 153, 0.3);
+      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* ========== REVEAL ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(48px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-l {
+      opacity: 0;
+      transform: translateX(-48px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-l.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-r {
+      opacity: 0;
+      transform: translateX(48px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-r.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .kawaii-bar {
+      height: 6px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #c084fc, #f472b6, #fbbf24, #c084fc);
+      background-size: 300% 100%;
+      animation: shimmer 2s linear infinite;
+    }
+
+    /* ========== TAG ========== */
+    .ktag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 12px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+
+    .ktag:hover {
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
+    }
+
+    /* ========== CAT MASCOT ========== */
+    .cat-mascot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      animation: floatY 2.5s ease-in-out infinite;
+      filter: drop-shadow(0 8px 20px rgba(168, 85, 247, 0.5));
+      transition: transform 0.2s;
+    }
+
+    .cat-mascot:hover {
+      transform: scale(1.2) rotate(-10deg);
+    }
+
+    .cat-mascot:active {
+      transform: scale(0.9);
+    }
+
+    .cat-bubble {
+      position: fixed;
+      bottom: 110px;
+      right: 14px;
+      z-index: 1001;
+      background: white;
+      border: 2px solid #c084fc;
+      border-radius: 16px 16px 4px 16px;
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      color: #7e22ce;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+      opacity: 0;
+      transform: translateY(10px) scale(0.9);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .cat-bubble.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* ========== SOUND BTN ========== */
+    .sound-ripple {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(192, 132, 252, 0.4);
+      animation: rippleOut 1.5s ease-out infinite;
+    }
+
+    @keyframes rippleOut {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    /* ========== SECTION BG VARIANTS ========== */
+    .bg-candy {
+      background: linear-gradient(145deg, #fdf4ff 0%, #fce7f3 40%, #f0fdf4 100%);
+    }
+
+    .bg-dreamy {
+      background: linear-gradient(160deg, #f3e8ff 0%, #e0f2fe 50%, #fce7f3 100%);
+    }
+
+    .bg-sunset {
+      background: linear-gradient(160deg, #fdf4ff 0%, #fef3c7 50%, #fce7f3 100%);
+    }
+
+    /* ========== FLOATING ICON DECORATION ========== */
+    .deco-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px dashed rgba(192, 132, 252, 0.35);
+      animation: rotateSlow linear infinite;
+    }
+
+    /* ========== MUSIC PLAYER ========== */
+    .vinyl {
+      background: conic-gradient(from 0deg, #7c3aed, #db2777, #f59e0b, #059669, #3b82f6, #7c3aed);
+      border-radius: 50%;
+      animation: spin 4s linear infinite paused;
+    }
+
+    .vinyl.playing {
+      animation-play-state: running;
+    }
+
+    /* ========== FLOWER CURSOR TRAIL ========== */
+    .trail-spark {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9997;
+      font-size: 1rem;
+      opacity: 0;
+      animation: trailFade 0.7s ease forwards;
+    }
+
+    @keyframes trailFade {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.5);
+      }
+    }
+
+    /* ========== GRADIENT BORDER CARD ========== */
+    .grad-border {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .grad-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #c084fc, #f472b6, #fbbf24);
+      z-index: 0;
+      padding: 2px;
+      border-radius: 24px;
+      -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+    /* Mobile nav transition */
+    #mobileMenu {
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    #mobileMenu.open {
+      max-height: 400px;
+      opacity: 1;
+    }
+
+    /* Float up keyframe for sparks */
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1)
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-60px) scale(1.4)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- ===== FLOATING PARTICLES CANVAS ===== -->
+  <div id="pContainer" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+  <!-- ===== CAT MASCOT ===== -->
+  <img src="images/cat.webp" alt="Cute cat mascot" class="cat-mascot" id="catMascot" onclick="catClick()"
+    title="Klik aku~!" />
+  <div class="cat-bubble" id="catBubble">Nyaaa~ ✨</div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2">
+        <span class="text-2xl animate-wiggle inline-block">🌸</span>
+        <span class="font-pacifico text-xl gtext neon-text">KawaiiWorld</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#home"
+          class="px-4 py-2 rounded-full text-sm font-bold text-lav-700 hover:bg-lav-100 transition-all hover:scale-105">🏠
+          Home</a>
+        <a href="#gallery"
+          class="px-4 py-2 rounded-full text-sm font-bold text-lav-700 hover:bg-lav-100 transition-all hover:scale-105">📸
+          Gallery</a>
+        <a href="#vibes"
+          class="px-4 py-2 rounded-full text-sm font-bold text-lav-700 hover:bg-lav-100 transition-all hover:scale-105">🎮
+          Vibes</a>
+        <a href="#love"
+          class="px-4 py-2 rounded-full text-sm font-bold text-lav-700 hover:bg-lav-100 transition-all hover:scale-105">💜
+          Love</a>
+      </div>
+
+      <!-- Sound & CTA -->
+      <div class="flex items-center gap-3">
+        <!-- Sound toggle -->
+        <div class="relative">
+          <button id="soundBtn" onclick="toggleAllSounds()"
+            class="relative w-10 h-10 rounded-full glass flex items-center justify-center text-lg z-10 hover:scale-110 transition-transform neon-purple"
+            title="Toggle Sound">🔈</button>
+          <div class="sound-ripple" id="soundRipple" style="display:none"></div>
+        </div>
+        <button
+          class="hidden md:flex shimmer-btn text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg gap-1.5 items-center">
+          💌 Follow Me
+        </button>
+        <button onclick="toggleMobileMenu()"
+          class="md:hidden w-9 h-9 glass rounded-full flex items-center justify-center text-lg">☰</button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu"
+      class="md:hidden bg-white/90 backdrop-blur border-t border-lav-100 px-5 flex flex-col gap-2 text-sm font-bold">
+      <a href="#home" class="py-2 text-lav-700 border-b border-lav-50" onclick="closeMobileMenu()">🏠 Home</a>
+      <a href="#gallery" class="py-2 text-lav-700 border-b border-lav-50" onclick="closeMobileMenu()">📸 Gallery</a>
+      <a href="#vibes" class="py-2 text-lav-700 border-b border-lav-50" onclick="closeMobileMenu()">🎮 Vibes</a>
+      <a href="#love" class="py-2 text-lav-700" onclick="closeMobileMenu()">💜 Love</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <!-- FA floating deco: fixed top-left corner cluster -->
+  <div class="fixed top-20 left-4 z-10 pointer-events-none hidden md:flex flex-col gap-3 opacity-30">
+    <i class="fa-solid fa-star text-lav-400 text-xl animate-twinkle"></i>
+    <i class="fa-solid fa-heart text-pink-400 text-lg animate-float" style="animation-delay:0.4s"></i>
+    <i class="fa-solid fa-star text-yellow-400 text-sm animate-twinkle" style="animation-delay:0.8s"></i>
+  </div>
+  <section id="home"
+    class="hero-bg min-h-screen pt-16 flex flex-col items-center justify-center relative overflow-hidden">
+
+    <!-- Decorative rings -->
+    <div class="deco-ring absolute top-1/4 left-1/4 w-64 h-64 opacity-50" style="animation-duration:20s"></div>
+    <div class="deco-ring absolute top-1/2 right-1/4 w-48 h-48 opacity-40"
+      style="animation-duration:15s;animation-direction:reverse"></div>
+    <div class="deco-ring absolute bottom-1/4 left-1/3 w-80 h-80 opacity-30" style="animation-duration:25s"></div>
+
+    <!-- Blob decorations -->
+    <div class="absolute top-24 left-8 w-52 h-52 rounded-full blur-3xl opacity-40 animate-pulse-soft"
+      style="background:radial-gradient(circle,#e879f9,#a855f7)"></div>
+    <div class="absolute bottom-32 right-8 w-64 h-64 rounded-full blur-3xl opacity-35 animate-pulse-soft"
+      style="background:radial-gradient(circle,#f472b6,#e879f9);animation-delay:2s"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl opacity-20"
+      style="background:radial-gradient(circle,#c084fc,transparent)"></div>
+
+    <div class="relative z-10 max-w-5xl w-full px-5 flex flex-col items-center">
+
+
+
+
+      <!-- Title -->
+      <div class="text-center reveal" style="transition-delay:0.1s">
+        <!-- FA ribbon badge row -->
+        <div class="flex justify-center gap-3 mb-3 text-lav-400">
+          <i class="fa-solid fa-wand-magic-sparkles text-lg animate-twinkle"></i>
+          <i class="fa-solid fa-ribbon text-pink-400 text-lg animate-float"></i>
+          <i class="fa-solid fa-star text-yellow-400 text-lg animate-twinkle" style="animation-delay:0.5s"></i>
+          <i class="fa-solid fa-cloud text-sky-300 text-lg animate-float2"></i>
+          <i class="fa-solid fa-wand-magic-sparkles text-lav-400 text-lg animate-twinkle" style="animation-delay:1s"></i>
+        </div>
+        <div class="flex justify-center gap-2 mb-4 text-2xl flex-wrap">
+          <span class="sticker animate-float">🐱</span>
+          <span class="sticker animate-float2">🐼</span>
+          <span class="sticker animate-float3">🐰</span>
+          <span class="sticker animate-float">🌸</span>
+          <span class="sticker animate-float2">🍓</span>
+          <span class="sticker animate-float3">🎀</span>
+        </div>
+
+        <h1 class="font-pacifico text-5xl md:text-7xl gtext leading-tight mb-4 neon-text">
+          Kawaii World~
+        </h1>
+        <p class="font-quicksand text-lav-700 text-lg md:text-xl font-semibold leading-relaxed mb-6 max-w-xl mx-auto">
+          ✨ Tempat paling <span class="font-pacifico text-pink-500">imut</span> &
+          <span class="font-pacifico text-lav-500">menggemaskan</span>!<br />
+          Healing, refreshing & full of kawaii vibes~ 🌈
+        </p>
+
+        <!-- Tags scrolling marquee -->
+        <div class="relative overflow-hidden mb-7 py-2">
+          <div class="flex gap-3 animate-[scrollX_18s_linear_infinite] w-max">
+            <span class="ktag bg-lav-100 text-lav-700">🐱 Sanrio</span>
+            <span class="ktag bg-blush-100 text-pink-600">🐼 Panda</span>
+            <span class="ktag bg-lav-200 text-lav-800">🐶 Cinnamoroll</span>
+            <span class="ktag bg-mint-100 text-green-700">🐰 My Melody</span>
+            <span class="ktag bg-sky-100 text-blue-700">💜 Kuromi</span>
+            <span class="ktag bg-gold-100 text-yellow-700">⭐ Pompompurin</span>
+            <span class="ktag bg-peach-100 text-orange-600">🍓 Strawberry</span>
+            <span class="ktag bg-lav-100 text-lav-700">🐱 Hello Kitty</span>
+            <!-- duplicate for infinite scroll -->
+            <span class="ktag bg-lav-100 text-lav-700">🐱 Sanrio</span>
+            <span class="ktag bg-blush-100 text-pink-600">🐼 Panda</span>
+            <span class="ktag bg-lav-200 text-lav-800">🐶 Cinnamoroll</span>
+            <span class="ktag bg-mint-100 text-green-700">🐰 My Melody</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#gallery" onclick="playSfx('pop')"
+            class="shimmer-btn text-white px-9 py-3.5 rounded-full font-bold text-base shadow-xl flex items-center gap-2">
+            <span>📸</span> Lihat Foto
+          </a>
+          <a href="#vibes" onclick="playSfx('click')"
+            class="glass text-lav-700 border border-lav-300 px-9 py-3.5 rounded-full font-bold text-base hover:bg-lav-100 hover:scale-105 transition-all flex items-center gap-2 shadow-md">
+            <span>✨</span> Get Vibes
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce-cute">
+      <span class="text-lav-400 text-xs font-bold tracking-widest uppercase">Scroll~</span>
+      <div class="w-6 h-10 border-2 border-lav-300 rounded-full flex justify-center pt-2">
+        <div class="w-1.5 h-3 bg-gradient-to-b from-lav-400 to-pink-400 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAT FEATURE SECTION ===== -->
+  <section class="py-20 px-5 bg-candy relative overflow-hidden">
+    <!-- FA section deco top bar -->
+    <div class="flex justify-center gap-5 text-2xl mb-8 opacity-50 pointer-events-none">
+      <i class="fa-solid fa-paw text-lav-400 animate-float"></i>
+      <i class="fa-solid fa-heart text-pink-400 animate-float2"></i>
+      <i class="fa-solid fa-paw text-lav-300 animate-float3"></i>
+      <i class="fa-solid fa-star text-yellow-400 animate-float"></i>
+      <i class="fa-solid fa-paw text-pink-300 animate-float2"></i>
+    </div>
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+        <!-- Cat card -->
+        <div class="reveal-l flex-shrink-0 relative">
+          <!-- Glow bg -->
+          <div class="absolute inset-0 rounded-full blur-3xl opacity-50 scale-75"
+            style="background:radial-gradient(circle,#e879f9,#a855f7)"></div>
+          <!-- Rotating ring -->
+          <div
+            class="absolute inset-[-12px] rounded-full border-4 border-dashed border-lav-300/60 animate-spin-slow pointer-events-none">
+          </div>
+          <div
+            class="absolute inset-[-24px] rounded-full border-2 border-dashed border-blush-300/40 animate-spin-rev pointer-events-none">
+          </div>
+
+          <div class="relative glass rounded-full p-6 neon-purple cursor-pointer" onclick="playSfx('meow')"
+            title="Klik untuk meow~!">
+            <img src="images/cat.webp" alt="Cute crying cat sticker"
+              class="w-44 h-44 md:w-56 md:h-56 object-contain animate-float"
+              style="filter:drop-shadow(0 8px 30px rgba(168,85,247,0.6))" />
+          </div>
+
+          <!-- Badge -->
+          <div
+            class="absolute -top-3 -right-3 bg-gradient-to-br from-pink-400 to-lav-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-heartbeat">
+            🐱 Kawaii!
+          </div>
+        </div>
+
+        <!-- Text content -->
+        <div class="reveal-r flex-1 text-center md:text-left">
+          <div
+            class="inline-flex items-center gap-2 bg-lav-100 text-lav-700 px-4 py-1.5 rounded-full text-xs font-bold mb-4 border border-lav-200">
+            <span class="animate-twinkle inline-block">✨</span> Mascot Resmi
+          </div>
+          <h2 class="font-pacifico text-3xl md:text-5xl gtext leading-tight mb-4">
+            Meet Kiki~<br />Si Kucing Imut!
+          </h2>
+          <p class="text-lav-600 font-semibold leading-relaxed mb-6 text-base">
+            Kiki adalah kucing kawaii yang selalu menemani hari-harimu!
+            Ekspresinya yang lucu bikin siapapun langsung senyum~ 🥰<br /><br />
+            <span class="text-pink-500 font-bold">Klik gambarnya</span> untuk dapetin sound meow yang imut! 🐾
+          </p>
+
+          <!-- Stats cute -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="glass rounded-2xl p-3 text-center hover:scale-105 transition-transform">
+              <div class="text-2xl mb-1">😻</div>
+              <div class="text-xs font-bold text-lav-700">Super</div>
+              <div class="text-xs text-lav-500">Cute</div>
+            </div>
+            <div class="glass rounded-2xl p-3 text-center hover:scale-105 transition-transform">
+              <div class="text-2xl mb-1">🌸</div>
+              <div class="text-xs font-bold text-lav-700">Always</div>
+              <div class="text-xs text-lav-500">Kawaii</div>
+            </div>
+            <div class="glass rounded-2xl p-3 text-center hover:scale-105 transition-transform">
+              <div class="text-2xl mb-1">💜</div>
+              <div class="text-xs font-bold text-lav-700">Full of</div>
+              <div class="text-xs text-lav-500">Love</div>
+            </div>
+          </div>
+
+          <!-- Sound button -->
+          <button onclick="playSfx('meow')"
+            class="mt-6 shimmer-btn text-white px-7 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg w-full md:w-auto justify-center">
+            🔊 Play Meow~ 🐾
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery" class="py-20 px-5 bg-dreamy relative overflow-hidden">
+
+    <!-- FA corner ornaments -->
+    <div class="absolute top-6 left-6 text-lav-300/40 text-4xl pointer-events-none">
+      <i class="fa-solid fa-camera-retro animate-float"></i>
+    </div>
+    <div class="absolute top-6 right-6 text-pink-300/40 text-4xl pointer-events-none">
+      <i class="fa-solid fa-images animate-float2"></i>
+    </div>
+
+    <!-- Deco blobs -->
+    <div class="absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl opacity-25 -translate-y-1/2 translate-x-1/2"
+      style="background:#e879f9"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"
+      style="background:#a855f7"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+
+      <!-- Header -->
+      <div class="text-center mb-14 reveal">
+        <div
+          class="inline-flex items-center gap-2 glass text-lav-700 px-5 py-2 rounded-full text-sm font-bold mb-5 border border-lav-200/60 shadow-sm">
+          <span class="animate-heartbeat inline-block">💜</span> Photo Gallery
+        </div>
+        <!-- FA icon row under heading -->
+      <div class="flex justify-center gap-4 text-xl text-lav-400/70 mb-2">
+        <i class="fa-solid fa-camera animate-twinkle"></i>
+        <i class="fa-regular fa-star animate-twinkle" style="animation-delay:0.3s"></i>
+        <i class="fa-solid fa-heart text-pink-400 animate-heartbeat"></i>
+        <i class="fa-regular fa-star animate-twinkle" style="animation-delay:0.6s"></i>
+        <i class="fa-solid fa-camera-retro animate-twinkle" style="animation-delay:0.9s"></i>
+      </div>
+      <h2 class="font-pacifico text-4xl md:text-6xl gtext mb-3">My Cute Moments~</h2>
+        <p class="text-lav-600 font-semibold text-lg">Koleksi foto paling imut & menggemaskan! 🌸📸</p>
+      </div>
+
+      <!-- Gallery cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-10 reveal">
+
+        <!-- Photo 1 -->
+        <div class="card-hover glass rounded-[28px] overflow-hidden shadow-xl cursor-pointer group"
+          onclick="openModal('images/photo1.jpg'); playSfx('chime')">
+          <div class="relative overflow-hidden">
+            <img src="images/photo1.jpg" alt="Kawaii Filter Fun"
+              class="w-full h-80 object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-lav-900/70 via-lav-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-5">
+              <p class="text-white font-bold text-sm mb-1">🐱 Kawaii Filter Vibes</p>
+              <p class="text-lav-200 text-xs">Tap to zoom ✨</p>
+            </div>
+            <!-- Badge -->
+            <div
+              class="absolute top-4 left-4 bg-gradient-to-r from-lav-400 to-blush-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pop-in">
+              🎮 Fun</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lav-700 text-base mb-1">✨ Kawaii Filter Vibes</h3>
+            <p class="text-lav-500 text-sm leading-relaxed">Cat ears & filter super cute! Dari Mario cap sampai bunny
+              🐱🐰</p>
+            <div class="kawaii-bar w-full mt-3 rounded-full"></div>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="ktag bg-lav-100 text-lav-600">🐱 Cat</span>
+              <span class="ktag bg-blush-100 text-pink-500">🎮 Fun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 — featured center -->
+        <div
+          class="card-hover glass rounded-[28px] overflow-hidden shadow-2xl cursor-pointer group md:-mt-4 md:mb-4 border-2 border-lav-300/40"
+          onclick="openModal('images/photo2.jpg'); playSfx('chime')"
+          style="box-shadow:0 20px 60px rgba(168,85,247,0.3)">
+          <div class="relative overflow-hidden">
+            <img src="images/photo2.jpg" alt="Heart Crown Aesthetic"
+              class="w-full h-96 object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-5">
+              <p class="text-white font-bold text-sm mb-1">💖 Heart Crown Aesthetic</p>
+              <p class="text-pink-200 text-xs">Tap to zoom ✨</p>
+            </div>
+            <div
+              class="absolute top-4 left-4 bg-gradient-to-r from-pink-400 to-rose-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pop-in">
+              ⭐ Featured</div>
+            <!-- Crown decoration -->
+            <div class="absolute top-4 right-4 text-3xl animate-heartbeat">👑</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lav-700 text-base mb-1">💖 Heart Crown Aesthetic</h3>
+            <p class="text-lav-500 text-sm leading-relaxed">Heart crown filter + kacamata = combo paling cute ever! 💗
+            </p>
+            <div class="kawaii-bar w-full mt-3 rounded-full"></div>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="ktag bg-pink-100 text-pink-600">💕 Hearts</span>
+              <span class="ktag bg-lav-100 text-lav-600">😎 Glasses</span>
+              <span class="ktag bg-rose-50 text-rose-500">🌸 Girly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="card-hover glass rounded-[28px] overflow-hidden shadow-xl cursor-pointer group"
+          onclick="openModal('images/photo3.jpg'); playSfx('chime')">
+          <div class="relative overflow-hidden">
+            <img src="images/photo3.jpg" alt="Mickey Pajama Cozy"
+              class="w-full h-80 object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-lav-900/70 via-lav-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-5">
+              <p class="text-white font-bold text-sm mb-1">🐭 Mickey Pajama Day</p>
+              <p class="text-lav-200 text-xs">Tap to zoom ✨</p>
+            </div>
+            <div
+              class="absolute top-4 left-4 bg-gradient-to-r from-sky-400 to-lav-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow animate-pop-in">
+              😴 Cozy</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lav-700 text-base mb-1">🐭 Mickey Pajama Day~</h3>
+            <p class="text-lav-500 text-sm leading-relaxed">Piyama Mickey + heart filter = perfect cozy aesthetic! 🌸
+            </p>
+            <div class="kawaii-bar w-full mt-3 rounded-full"></div>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="ktag bg-sky-100 text-blue-600">🐭 Mickey</span>
+              <span class="ktag bg-pink-100 text-pink-500">💗 Sweet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIBES / INTERACTIVE ===== -->
+  <section id="vibes" class="py-20 px-5 bg-candy relative overflow-hidden">
+    <!-- FA floating right deco -->
+    <div class="absolute right-4 top-1/3 flex flex-col gap-4 text-2xl opacity-20 pointer-events-none hidden md:flex">
+      <i class="fa-solid fa-music text-lav-400 animate-float"></i>
+      <i class="fa-solid fa-gamepad text-pink-400 animate-float2"></i>
+      <i class="fa-solid fa-music text-lav-300 animate-float3"></i>
+    </div>
+    <!-- FA floating left deco -->
+    <div class="absolute left-4 top-1/3 flex flex-col gap-4 text-2xl opacity-20 pointer-events-none hidden md:flex">
+      <i class="fa-solid fa-dice text-pink-400 animate-float2"></i>
+      <i class="fa-solid fa-wand-magic-sparkles text-lav-400 animate-float3"></i>
+      <i class="fa-solid fa-dice text-lav-300 animate-float"></i>
+    </div>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-4xl animate-float inline-block">🎮</span>
+        <h2 class="font-pacifico text-4xl md:text-5xl gtext mt-2 mb-2">Kawaii Vibes~ <i class="fa-solid fa-sparkles text-yellow-400"></i></h2>
+        <p class="text-lav-600 font-semibold">Interact & play untuk healing sempurna! 🌈</p>
+        <!-- FA mini icon strip -->
+        <div class="flex justify-center gap-5 mt-4 text-lav-400/70 text-lg">
+          <i class="fa-solid fa-face-smile-wink animate-wiggle"></i>
+          <i class="fa-solid fa-music animate-float"></i>
+          <i class="fa-solid fa-dice animate-float2"></i>
+          <i class="fa-solid fa-face-kiss-wink-heart animate-heartbeat text-pink-400"></i>
+          <i class="fa-solid fa-music animate-float3"></i>
+          <i class="fa-solid fa-face-smile-wink animate-wiggle" style="animation-delay:0.5s"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- MOOD PICKER -->
+        <div class="glass rounded-[28px] p-7 shadow-xl reveal card-hover border border-lav-200/40">
+          <h3 class="font-pacifico text-xl text-lav-700 mb-5 flex items-center gap-2">
+            <span class="animate-wiggle inline-block text-2xl">🎀</span> Mood Hari Ini
+          </h3>
+          <div class="grid grid-cols-3 gap-3">
+            <button onclick="pickMood(this,'💜','Purple Vibes')"
+              class="mood-btn bg-lav-50 hover:bg-lav-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-lav-200/50">
+              <div class="text-3xl">💜</div>
+              <div class="text-xs font-bold text-lav-600 mt-1.5">Purple</div>
+            </button>
+            <button onclick="pickMood(this,'🌸','Sakura Day')"
+              class="mood-btn bg-pink-50 hover:bg-pink-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-pink-100">
+              <div class="text-3xl">🌸</div>
+              <div class="text-xs font-bold text-pink-500 mt-1.5">Sakura</div>
+            </button>
+            <button onclick="pickMood(this,'⭐','Star Girl')"
+              class="mood-btn bg-yellow-50 hover:bg-yellow-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-yellow-100">
+              <div class="text-3xl">⭐</div>
+              <div class="text-xs font-bold text-yellow-600 mt-1.5">Star</div>
+            </button>
+            <button onclick="pickMood(this,'🐱','Catty Mode')"
+              class="mood-btn bg-orange-50 hover:bg-orange-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-orange-100">
+              <div class="text-3xl">🐱</div>
+              <div class="text-xs font-bold text-orange-500 mt-1.5">Catty</div>
+            </button>
+            <button onclick="pickMood(this,'🍓','Berry Sweet')"
+              class="mood-btn bg-red-50 hover:bg-red-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-red-100">
+              <div class="text-3xl">🍓</div>
+              <div class="text-xs font-bold text-red-400 mt-1.5">Berry</div>
+            </button>
+            <button onclick="pickMood(this,'🌈','Rainbow~')"
+              class="mood-btn bg-sky-50 hover:bg-sky-100 rounded-2xl p-4 transition-all hover:scale-110 active:scale-95 border border-sky-100">
+              <div class="text-3xl">🌈</div>
+              <div class="text-xs font-bold text-sky-500 mt-1.5">Rainbow</div>
+            </button>
+          </div>
+          <div id="moodResult" class="hidden mt-4 text-center glass rounded-2xl py-3 px-4 border border-lav-200/40">
+            <span class="text-lav-600 font-bold text-sm">Mood: </span>
+            <span id="moodLabel" class="text-lav-800 font-bold text-base"></span>
+            <span id="moodEmoji" class="text-xl ml-1"></span>
+          </div>
+        </div>
+
+        <!-- AFFIRMATION -->
+        <div class="glass rounded-[28px] p-7 shadow-xl reveal card-hover border border-lav-200/40"
+          style="transition-delay:0.1s">
+          <h3 class="font-pacifico text-xl text-lav-700 mb-5 flex items-center gap-2">
+            <span class="animate-heartbeat inline-block text-2xl">💌</span> Cute Affirmation
+          </h3>
+          <div
+            class="relative bg-gradient-to-br from-lav-100 to-blush-100 rounded-2xl p-5 min-h-[110px] flex items-center justify-center border border-lav-200/40 overflow-hidden">
+            <!-- Decorative -->
+            <div class="absolute top-2 right-3 text-2xl opacity-30 animate-float">✨</div>
+            <div class="absolute bottom-2 left-3 text-2xl opacity-30 animate-float2">🌸</div>
+            <p id="affirmText"
+              class="text-lav-700 font-bold text-center text-sm leading-relaxed relative z-10 transition-opacity duration-300">
+              ✨ Kamu itu cantik, imut & sangat berharga! Hari ini pasti indah~ 🌸
+            </p>
+          </div>
+          <button onclick="newAffirm()"
+            class="mt-4 w-full shimmer-btn text-white rounded-full py-3 font-bold text-sm flex items-center justify-center gap-2 shadow-lg">
+            🎲 Kata Baru~ ✨
+          </button>
+          <!-- Sound cue for affirmation -->
+          <div class="flex justify-center gap-2 mt-3">
+            <button onclick="playSfx('chime')"
+              class="text-xs glass text-lav-600 px-3 py-1.5 rounded-full hover:bg-lav-100 font-bold transition-all">🔔
+              Chime</button>
+            <button onclick="playSfx('pop')"
+              class="text-xs glass text-lav-600 px-3 py-1.5 rounded-full hover:bg-lav-100 font-bold transition-all">🎈
+              Pop</button>
+            <button onclick="playSfx('meow')"
+              class="text-xs glass text-lav-600 px-3 py-1.5 rounded-full hover:bg-lav-100 font-bold transition-all">🐱
+              Meow</button>
+          </div>
+        </div>
+
+        <!-- KAWAII CLICKER -->
+        <div class="glass rounded-[28px] p-7 shadow-xl reveal card-hover border border-lav-200/40"
+          style="transition-delay:0.15s">
+          <h3 class="font-pacifico text-xl text-lav-700 mb-3 flex items-center gap-2">
+            <span class="animate-float inline-block text-2xl">🎮</span> Kawaii Clicker
+          </h3>
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <span class="text-lav-500 text-xs font-bold">SCORE</span>
+              <div id="clickScore" class="font-pacifico text-3xl gtext leading-none">0</div>
+            </div>
+            <div class="text-right">
+              <span class="text-lav-500 text-xs font-bold">LEVEL</span>
+              <div id="clickLevel" class="font-bold text-lav-700 text-sm">😺 Kitty</div>
+            </div>
+          </div>
+          <div class="kawaii-bar w-full rounded-full mb-4"></div>
+          <!-- Click area -->
+          <div id="clickArea" onclick="doClick(event)"
+            class="relative bg-gradient-to-br from-lav-50 to-blush-100 rounded-2xl h-36 flex items-center justify-center overflow-hidden cursor-pointer border-2 border-dashed border-lav-300/60 hover:border-lav-400 transition-colors select-none active:scale-95">
+            <img id="clickCat" src="images/cat.webp" alt="Click me!"
+              class="h-24 object-contain pointer-events-none transition-transform"
+              style="filter:drop-shadow(0 4px 16px rgba(168,85,247,0.5))" />
+            <span class="absolute bottom-2 right-3 text-xs text-lav-400 font-bold">Klik aku~! 🐾</span>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <p class="text-xs text-lav-400 font-semibold">Klik untuk kumpulkan poin!</p>
+            <button onclick="resetClick()"
+              class="text-xs glass text-lav-600 px-3 py-1.5 rounded-full hover:bg-lav-100 font-bold transition-all">Reset</button>
+          </div>
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <!-- Hidden real audio element -->
+        <audio id="kawaiiAudio" loop preload="metadata">
+          <source src="chinasongcute.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div class="glass rounded-[28px] p-7 shadow-xl reveal card-hover border border-lav-200/40"
+          style="transition-delay:0.2s">
+          <h3 class="font-pacifico text-xl text-lav-700 mb-5 flex items-center gap-2">
+            <span id="vinylIcon" class="inline-block text-2xl animate-spin-slow">🎵</span> Kawaii Radio
+          </h3>
+
+          <!-- Now playing display -->
+          <div class="bg-gradient-to-br from-lav-50 to-blush-100 rounded-2xl p-4 mb-5 border border-lav-200/40">
+            <div class="flex items-center gap-3 mb-3">
+              <!-- Vinyl disc -->
+              <div id="vinylDisc"
+                class="vinyl w-14 h-14 flex-shrink-0 flex items-center justify-center text-xl border-4 border-white shadow-md"
+                style="box-shadow:0 0 20px rgba(168,85,247,0.4)">
+                <div class="w-5 h-5 bg-white rounded-full opacity-80"></div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="font-bold text-lav-700 text-sm truncate" id="trackName">China Song Cute~ 🎵</p>
+                <p class="text-lav-500 text-xs" id="trackArtist">🎀 KawaiiWorld Radio</p>
+                <!-- Volume slider -->
+                <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="0.25"
+                  oninput="setVolume(this.value)"
+                  class="w-full mt-1 h-1.5 rounded-full accent-purple-500 cursor-pointer" title="Volume" />
+              </div>
+            </div>
+            <!-- Real progress bar (clickable) -->
+            <div class="relative w-full h-2 bg-lav-200/60 rounded-full mb-1 cursor-pointer" id="progressTrack"
+              onclick="seekAudio(event)">
+              <div id="progressFill" class="absolute left-0 top-0 h-full rounded-full transition-none"
+                style="width:0%;background:linear-gradient(90deg,#c084fc,#f472b6,#fbbf24)"></div>
+            </div>
+            <div class="flex justify-between text-xs text-lav-400 font-semibold">
+              <span id="currentTime">0:00</span>
+              <span id="totalTime">0:00</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex justify-center items-center gap-4">
+            <button onclick="rewindAudio()"
+              class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-lav-100 transition-all hover:scale-110 text-lg"
+              title="Rewind 10s">⏮</button>
+            <button id="playPauseBtn" onclick="togglePlayerPlay()"
+              class="w-16 h-16 shimmer-btn rounded-full flex items-center justify-center text-white text-2xl shadow-xl hover:scale-105 active:scale-95 transition-transform">
+              ▶
+            </button>
+            <button onclick="forwardAudio()"
+              class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-lav-100 transition-all hover:scale-110 text-lg"
+              title="Forward 10s">⏭</button>
+          </div>
+
+          <!-- Sound effect buttons -->
+          <div class="mt-4 grid grid-cols-3 gap-2">
+            <button onclick="playSfx('chime')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">🔔
+              Chime</button>
+            <button onclick="playSfx('pop')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">🎈
+              Pop</button>
+            <button onclick="playSfx('sparkle')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">✨
+              Sparkle</button>
+            <button onclick="playSfx('meow')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">🐱
+              Meow</button>
+            <button onclick="playSfx('heart')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">💜
+              Heart</button>
+            <button onclick="playSfx('giggle')"
+              class="glass text-lav-700 text-xs font-bold py-2 rounded-xl hover:bg-lav-100 transition-all hover:scale-105 active:scale-95">😂
+              Giggle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STICKER WALL ===== -->
+  <section class="py-16 px-5 overflow-hidden"
+    style="background:linear-gradient(160deg,#ede9fe 0%,#fce7f3 50%,#ede9fe 100%)">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <!-- FA decorative divider -->
+      <div class="flex justify-center items-center gap-3 text-lav-300/70 text-sm mb-4">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-heart text-pink-300"></i>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-heart text-pink-300"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <h2 class="font-pacifico text-3xl md:text-4xl gtext mb-2">Sticker Wall~ <i class="fa-solid fa-face-grin-hearts text-pink-400"></i></h2>
+      <p class="text-lav-500 font-semibold mb-8 text-sm">Klik sticker untuk suara & efek imut! 🤩</p>
+      <div id="stickerWall" class="flex flex-wrap justify-center gap-4 text-4xl select-none"></div>
+    </div>
+  </section>
+
+  <!-- ===== LOVE / POLAROID ===== -->
+  <section id="love" class="py-20 px-5 bg-sunset relative overflow-hidden">
+    <!-- FA corner deco -->
+    <div class="absolute top-6 left-6 text-3xl text-pink-300/30 pointer-events-none">
+      <i class="fa-solid fa-heart animate-heartbeat"></i>
+    </div>
+    <div class="absolute top-6 right-6 text-3xl text-lav-300/30 pointer-events-none">
+      <i class="fa-solid fa-star animate-twinkle"></i>
+    </div>
+    <div class="absolute top-20 left-16 text-7xl opacity-10 animate-float">💜</div>
+    <div class="absolute top-1/3 right-12 text-6xl opacity-10 animate-float2">🌸</div>
+    <div class="absolute bottom-20 left-1/3 text-8xl opacity-10 animate-float3">⭐</div>
+
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-5xl animate-heartbeat inline-block">💜</span>
+        <h2 class="font-pacifico text-4xl md:text-6xl gtext mt-3 mb-2">With Love~ <i class="fa-solid fa-heart text-pink-500 animate-heartbeat"></i></h2>
+        <p class="text-lav-600 font-semibold text-lg">Untuk cewek kawaii & cantik! 🌸</p>
+        <!-- FA love icons strip -->
+        <div class="flex justify-center gap-4 mt-3 text-xl">
+          <i class="fa-solid fa-heart text-pink-400 animate-heartbeat"></i>
+          <i class="fa-solid fa-star text-yellow-400 animate-twinkle"></i>
+          <i class="fa-solid fa-crown text-yellow-500 animate-float"></i>
+          <i class="fa-solid fa-star text-yellow-400 animate-twinkle" style="animation-delay:0.4s"></i>
+          <i class="fa-solid fa-heart text-pink-400 animate-heartbeat" style="animation-delay:0.3s"></i>
+        </div>
+      </div>
+
+      <!-- Polaroid wall -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+
+        <div class="polaroid hover:rotate-3 hover:-translate-y-3 cursor-pointer reveal-l"
+          onclick="openModal('images/photo1.jpg'); playSfx('chime')" style="transition-delay:0s">
+          <img src="images/photo1.jpg" alt="Kawaii selfie 1" class="w-full h-56 object-cover object-top rounded-sm" />
+          <div class="mt-4 text-center">
+            <p class="font-pacifico text-lav-500 text-sm">✨ Kawaii Moments</p>
+            <p class="text-lav-400 text-xs mt-1 font-semibold">July 2026</p>
+          </div>
+        </div>
+
+        <div class="polaroid hover:-rotate-2 hover:-translate-y-3 cursor-pointer reveal md:mt-8"
+          onclick="openModal('images/photo2.jpg'); playSfx('chime')" style="transition-delay:0.1s">
+          <img src="images/photo2.jpg" alt="Kawaii selfie 2" class="w-full h-56 object-cover object-top rounded-sm" />
+          <div class="mt-4 text-center">
+            <p class="font-pacifico text-pink-400 text-sm">💖 Heart Vibes</p>
+            <p class="text-lav-400 text-xs mt-1 font-semibold">July 2026</p>
+          </div>
+        </div>
+
+        <div class="polaroid hover:rotate-2 hover:-translate-y-3 cursor-pointer reveal-r"
+          onclick="openModal('images/photo3.jpg'); playSfx('chime')" style="transition-delay:0.2s">
+          <img src="images/photo3.jpg" alt="Kawaii selfie 3" class="w-full h-56 object-cover object-top rounded-sm" />
+          <div class="mt-4 text-center">
+            <p class="font-pacifico text-lav-500 text-sm">🐭 Cozy Days</p>
+            <p class="text-lav-400 text-xs mt-1 font-semibold">July 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote card -->
+      <div class="glass rounded-[32px] p-10 text-center shadow-2xl max-w-2xl mx-auto reveal border border-lav-200/50"
+        style="box-shadow:0 24px 80px rgba(168,85,247,0.2)">
+        <!-- Glow -->
+        <div class="absolute inset-0 rounded-[32px] pointer-events-none"
+          style="background:radial-gradient(ellipse at 50% 0%,rgba(232,121,249,0.15),transparent 70%)"></div>
+
+        <div class="text-6xl mb-5 animate-heartbeat inline-block">🎀</div>
+        <blockquote class="font-pacifico text-2xl md:text-3xl gtext leading-relaxed mb-4">
+          "You're not just cute,<br />you're absolutely magical ✨"
+        </blockquote>
+        <p class="text-lav-500 font-semibold">— with kawaii love, always~ 💜🌸</p>
+
+        <div class="flex justify-center gap-4 mt-7 text-3xl">
+          <span class="sticker animate-float">🌸</span>
+          <span class="sticker animate-float2">💜</span>
+          <img src="images/cat.webp" alt="cat" class="h-10 object-contain animate-float3 sticker"
+            onclick="playSfx('meow')" />
+          <span class="sticker animate-float">🎀</span>
+          <span class="sticker animate-float2">⭐</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative overflow-hidden py-16 px-5"
+    style="background:linear-gradient(180deg,#ede9fe 0%,#d8b4fe 100%)">
+
+    <!-- Decorative blobs -->
+    <div class="absolute top-0 left-1/4 w-64 h-64 rounded-full blur-3xl opacity-30 pointer-events-none"
+      style="background:radial-gradient(circle,#e879f9,#a855f7)"></div>
+    <div class="absolute bottom-0 right-1/4 w-48 h-48 rounded-full blur-3xl opacity-25 pointer-events-none"
+      style="background:radial-gradient(circle,#f472b6,#c084fc)"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+
+      <!-- BIG CAT MASCOT -->
+      <div class="flex justify-center mb-6" onclick="playSfx('meow')">
+        <div class="relative cursor-pointer group">
+          <!-- Glow ring behind cat -->
+          <div
+            class="absolute inset-0 rounded-full blur-2xl opacity-60 scale-90 group-hover:scale-110 transition-transform duration-500"
+            style="background:radial-gradient(circle,#e879f9,#a855f7,transparent)"></div>
+          <!-- Rotating dashed ring -->
+          <div
+            class="absolute inset-[-20px] rounded-full border-4 border-dashed border-lav-300/50 animate-spin-slow pointer-events-none">
+          </div>
+          <div
+            class="absolute inset-[-36px] rounded-full border-2 border-dashed border-blush-300/30 animate-spin-rev pointer-events-none">
+          </div>
+
+          <img src="images/cat.webp" alt="Kiki the Kawaii Cat"
+            class="relative w-52 h-52 md:w-72 md:h-72 object-contain animate-float group-hover:scale-110 transition-transform duration-500"
+            style="filter:drop-shadow(0 12px 40px rgba(168,85,247,0.7)) drop-shadow(0 0 20px rgba(236,72,153,0.5))" />
+
+          <!-- Floating hearts around cat -->
+          <span class="absolute top-0 right-4 text-2xl animate-float2 pointer-events-none">💜</span>
+          <span class="absolute top-8 left-0 text-xl animate-float3 pointer-events-none">🌸</span>
+          <span class="absolute bottom-4 right-0 text-2xl animate-float pointer-events-none">⭐</span>
+          <span class="absolute bottom-0 left-6 text-xl animate-float2 pointer-events-none">🎀</span>
+
+          <!-- Click tooltip -->
+          <div
+            class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white text-lav-700 font-bold text-xs px-3 py-1.5 rounded-full border border-lav-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Klik untuk meow~ 🐾
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <p class="font-pacifico text-3xl md:text-4xl gtext mb-2 neon-text">KawaiiWorld 🌸 <i class="fa-solid fa-heart text-pink-400"></i></p>
+      <!-- FA icon row in footer -->
+      <div class="flex justify-center gap-4 text-lav-500/70 text-lg mb-3">
+        <i class="fa-solid fa-paw animate-float"></i>
+        <i class="fa-solid fa-heart text-pink-400 animate-heartbeat"></i>
+        <i class="fa-solid fa-wand-magic-sparkles animate-twinkle"></i>
+        <i class="fa-solid fa-heart text-pink-400 animate-heartbeat" style="animation-delay:0.4s"></i>
+        <i class="fa-solid fa-paw animate-float2"></i>
+      </div>
+      <p class="text-lav-700 text-sm font-semibold mb-6">Made with <i class="fa-solid fa-heart text-pink-500"></i> untuk semua cewek kawaii di Indonesia~</p>
+
+      <!-- Sticker row -->
+      <div class="flex justify-center gap-4 mb-5 text-3xl">
+        <span class="sticker animate-float" onclick="playSfx('chime')">🐱</span>
+        <span class="sticker animate-float2" onclick="playSfx('pop')">🐼</span>
+        <span class="sticker animate-float3" onclick="playSfx('sparkle')">🐰</span>
+        <span class="sticker animate-float" onclick="playSfx('heart')">⭐</span>
+        <span class="sticker animate-float2" onclick="playSfx('meow')">🌸</span>
+      </div>
+
+      <p class="text-lav-600 text-xs font-bold tracking-wide">© 2026 KawaiiWorld • Stay cute always! ✨</p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div id="photoModal" class="modal-wrap" onclick="closeModal()">
+    <div class="relative" onclick="event.stopPropagation()">
+      <img id="modalImg" src="" alt="Preview" class="modal-img" />
+      <button onclick="closeModal()"
+        class="absolute -top-5 -right-5 w-11 h-11 bg-gradient-to-br from-lav-500 to-pink-400 text-white rounded-full font-bold text-lg shadow-xl flex items-center justify-center hover:scale-110 transition-transform">✕</button>
+    </div>
+  </div>
+
+  <!-- ===== SPARKLE STYLE ===== -->
+  <style>
+    @keyframes scrollX {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+  </style>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ============ AUDIO ENGINE (Web Audio API) ============
+    let audioCtx = null;
+    let soundEnabled = true;
+    let playerPlaying = false;
+    let trackIndex = 0;
+
+    function getAudioCtx() {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }
+
+    function playSfx(type) {
+      if (!soundEnabled) return;
+      const ctx = getAudioCtx();
+      const master = ctx.createGain();
+      master.gain.value = 0.35;
+      master.connect(ctx.destination);
+
+      const now = ctx.currentTime;
+
+      switch (type) {
+        case 'meow': {
+          // Synthesized meow: frequency sweep
+          const osc = ctx.createOscillator();
+          const g = ctx.createGain();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(800, now);
+          osc.frequency.exponentialRampToValueAtTime(1200, now + 0.08);
+          osc.frequency.exponentialRampToValueAtTime(700, now + 0.2);
+          osc.frequency.exponentialRampToValueAtTime(1100, now + 0.32);
+          osc.frequency.exponentialRampToValueAtTime(600, now + 0.5);
+          g.gain.setValueAtTime(0, now);
+          g.gain.linearRampToValueAtTime(0.4, now + 0.02);
+          g.gain.linearRampToValueAtTime(0.3, now + 0.3);
+          g.gain.linearRampToValueAtTime(0, now + 0.5);
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.value = 900;
+          filter.Q.value = 3;
+          osc.connect(filter); filter.connect(g); g.connect(master);
+          osc.start(now); osc.stop(now + 0.55);
+          break;
+        }
+        case 'chime': {
+          // Bell-like chime
+          [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'sine';
+            o.frequency.value = freq;
+            g.gain.setValueAtTime(0, now + i * 0.1);
+            g.gain.linearRampToValueAtTime(0.3, now + i * 0.1 + 0.02);
+            g.gain.exponentialRampToValueAtTime(0.001, now + i * 0.1 + 0.8);
+            o.connect(g); g.connect(master);
+            o.start(now + i * 0.1); o.stop(now + i * 0.1 + 0.9);
+          });
+          break;
+        }
+        case 'pop': {
+          const buf = ctx.createBuffer(1, ctx.sampleRate * 0.15, ctx.sampleRate);
+          const d = buf.getChannelData(0);
+          for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 4);
+          const src = ctx.createBufferSource();
+          src.buffer = buf;
+          const g = ctx.createGain(); g.gain.value = 0.6;
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'bandpass'; filter.frequency.value = 800; filter.Q.value = 0.5;
+          src.connect(filter); filter.connect(g); g.connect(master);
+          src.start(now);
+          break;
+        }
+        case 'sparkle': {
+          // Ascending sparkle arpeggio
+          [1046.5, 1318.5, 1567.98, 2093].forEach((f, i) => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'sine';
+            o.frequency.value = f;
+            g.gain.setValueAtTime(0, now + i * 0.07);
+            g.gain.linearRampToValueAtTime(0.25, now + i * 0.07 + 0.01);
+            g.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.35);
+            o.connect(g); g.connect(master);
+            o.start(now + i * 0.07); o.stop(now + i * 0.07 + 0.4);
+          });
+          break;
+        }
+        case 'heart': {
+          // Double thump heartbeat
+          [0, 0.15].forEach(t => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'sine';
+            o.frequency.setValueAtTime(120, now + t);
+            o.frequency.exponentialRampToValueAtTime(60, now + t + 0.1);
+            g.gain.setValueAtTime(0, now + t);
+            g.gain.linearRampToValueAtTime(0.5, now + t + 0.02);
+            g.gain.exponentialRampToValueAtTime(0.001, now + t + 0.12);
+            o.connect(g); g.connect(master);
+            o.start(now + t); o.stop(now + t + 0.15);
+          });
+          break;
+        }
+        case 'giggle': {
+          // Rapid upward blips
+          for (let i = 0; i < 5; i++) {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'sine';
+            o.frequency.value = 600 + i * 100;
+            g.gain.setValueAtTime(0, now + i * 0.08);
+            g.gain.linearRampToValueAtTime(0.25, now + i * 0.08 + 0.02);
+            g.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.1);
+            o.connect(g); g.connect(master);
+            o.start(now + i * 0.08); o.stop(now + i * 0.08 + 0.12);
+          }
+          break;
+        }
+        case 'click': {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = 880;
+          g.gain.setValueAtTime(0.3, now);
+          g.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+          o.connect(g); g.connect(master);
+          o.start(now); o.stop(now + 0.1);
+          break;
+        }
+      }
+    }
+
+    // ============ SOUND TOGGLE ============
+    function toggleAllSounds() {
+      soundEnabled = !soundEnabled;
+      const btn = document.getElementById('soundBtn');
+      const ripple = document.getElementById('soundRipple');
+      btn.textContent = soundEnabled ? '🔊' : '🔇';
+      ripple.style.display = soundEnabled ? 'block' : 'none';
+      if (soundEnabled) playSfx('chime');
+    }
+
+    // ============ PARTICLES ============
+    const pCont = document.getElementById('pContainer');
+    const pEmojis = ['🌸', '💜', '⭐', '🎀', '🐱', '✨', '💕', '🍓', '🌺', '💫', '🐼', '🐰', '🌈', '🌟', '🎵'];
+    function spawnParticle() {
+      const el = document.createElement('div');
+      el.className = 'particle';
+      el.textContent = pEmojis[Math.floor(Math.random() * pEmojis.length)];
+      el.style.cssText = `
+    left: ${Math.random() * 100}vw;
+    bottom: -40px;
+    font-size: ${0.7 + Math.random() * 1.4}rem;
+    animation-duration: ${9 + Math.random() * 10}s;
+    animation-delay: ${Math.random() * 3}s;
+  `;
+      pCont.appendChild(el);
+      setTimeout(() => el.remove(), 22000);
+    }
+    for (let i = 0; i < 14; i++) setTimeout(spawnParticle, i * 300);
+    setInterval(spawnParticle, 1800);
+
+    // ============ CUSTOM CURSOR ============
+    const curEl = document.getElementById('cursor');
+    const trailEl = document.getElementById('cursor-trail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      curEl.style.transform = `translate(${mx - 14}px, ${my - 14}px)`;
+      // Sparkle trail
+      if (Math.random() > 0.75) {
+        const sp = document.createElement('div');
+        sp.className = 'trail-spark';
+        sp.textContent = ['✨', '💜', '🌸', '⭐', '💕'][Math.floor(Math.random() * 5)];
+        sp.style.cssText = `left:${mx}px;top:${my}px`;
+        document.body.appendChild(sp);
+        setTimeout(() => sp.remove(), 750);
+      }
+    });
+    function animTrail() {
+      tx += (mx - tx) * 0.18; ty += (my - ty) * 0.18;
+      trailEl.style.transform = `translate(${tx - 5}px, ${ty - 5}px)`;
+      requestAnimationFrame(animTrail);
+    }
+    animTrail();
+
+    // ============ CAT MASCOT ============
+    const catMessages = ['Nyaaa~ ✨', 'Klik aku lagi! 🐾', 'Meow meow~ 💜', 'Aku di sini! 🌸', '*purring* 😻', 'So kawaii~ 🎀'];
+    let catMsgIdx = 0;
+    function catClick() {
+      playSfx('meow');
+      const bubble = document.getElementById('catBubble');
+      bubble.textContent = catMessages[catMsgIdx % catMessages.length];
+      catMsgIdx++;
+      bubble.classList.add('show');
+      clearTimeout(window._catTimer);
+      window._catTimer = setTimeout(() => bubble.classList.remove('show'), 2200);
+      // Bounce the mascot
+      const cat = document.getElementById('catMascot');
+      cat.style.transform = 'scale(1.4) rotate(-15deg)';
+      setTimeout(() => cat.style.transform = '', 300);
+      spawnFloater(window.innerWidth - 80, window.innerHeight - 110, '💜');
+    }
+    // Auto show bubble on load
+    setTimeout(() => {
+      const b = document.getElementById('catBubble');
+      b.textContent = 'Halo~ Aku Kiki! 🐱'; b.classList.add('show');
+      setTimeout(() => b.classList.remove('show'), 3000);
+    }, 2500);
+
+    // ============ STICKER WALL ============
+    const stkEmojis = ['🐱', '🐼', '🐰', '🌸', '💜', '⭐', '🎀', '🍓', '🌈', '✨', '💕', '🎮', '🌺', '💫', '🌟', '🍭', '🎠', '🦋', '🌙', '☁️', '🎨', '🍡', '💗', '🐶'];
+    const stkSfx = ['chime', 'pop', 'sparkle', 'meow', 'heart', 'giggle', 'click'];
+    const wall = document.getElementById('stickerWall');
+    stkEmojis.forEach(s => {
+      const el = document.createElement('span');
+      el.className = 'sticker text-4xl md:text-5xl p-1';
+      el.textContent = s;
+      el.onclick = () => {
+        playSfx(stkSfx[Math.floor(Math.random() * stkSfx.length)]);
+        el.style.transform = 'scale(2.2) rotate(20deg)';
+        setTimeout(() => el.style.transform = '', 350);
+        const rect = el.getBoundingClientRect();
+        spawnFloater(rect.left + rect.width / 2, rect.top, '💜');
+      };
+      wall.appendChild(el);
+    });
+
+    // ============ FLOAT UP HELPER ============
+    function spawnFloater(x, y, emoji) {
+      const el = document.createElement('div');
+      el.textContent = emoji;
+      el.style.cssText = `position:fixed;left:${x}px;top:${y}px;font-size:1.4rem;pointer-events:none;z-index:9997;animation:floatUp 0.9s ease forwards;transform:translateX(-50%)`;
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 1000);
+    }
+
+    // ============ MOOD PICKER ============
+    function pickMood(el, emoji, label) {
+      playSfx('chime');
+      document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('ring-4', 'ring-lav-400', 'scale-105'));
+      el.classList.add('ring-4', 'ring-lav-400', 'scale-105');
+      document.getElementById('moodEmoji').textContent = emoji;
+      document.getElementById('moodLabel').textContent = label;
+      document.getElementById('moodResult').classList.remove('hidden');
+      const rect = el.getBoundingClientRect();
+      spawnFloater(rect.left + rect.width / 2, rect.top, emoji);
+    }
+
+    // ============ AFFIRMATION ============
+    const affirmations = [
+      '✨ Kamu itu cantik, imut & sangat berharga! Hari ini pasti indah~ 🌸',
+      '💜 Senyummu bikin dunia jadi lebih indah! Tetap bersinar ya~ ⭐',
+      '🌸 Kamu istimewa dan dicintai! Jangan lupa bahagia hari ini~ 🎀',
+      '💕 You are a limited edition kawaii girl! Gak ada yang sepertimu~ 🐱',
+      '🌈 Setiap hari adalah petualangan baru yang indah! Semangat ya~ 💪✨',
+      '⭐ Kamu lebih kuat dan cantik dari yang kamu kira! Percaya diri~ 🌺',
+      '🎀 Keep shining, keep being cute, keep being YOU! 💜🌸',
+      '🐼 Kawaii girl dengan hati yang baik = combo sempurna! 🥰',
+      '🌟 Hari ini adalah harimu! Jadikan semuanya magical~ ✨💕',
+      '🐰 Kamu membawa kebahagiaan bagi semua orang! 💜',
+    ];
+    let aIdx = 0;
+    function newAffirm() {
+      playSfx('sparkle');
+      aIdx = (aIdx + 1) % affirmations.length;
+      const el = document.getElementById('affirmText');
+      el.style.opacity = 0;
+      setTimeout(() => { el.textContent = affirmations[aIdx]; el.style.opacity = 1; el.style.transition = 'opacity 0.4s' }, 280);
+    }
+
+    // ============ KAWAII CLICKER ============
+    let clicks = 0;
+    const clickChars = ['🐱', '🐼', '🐰', '🌸', '⭐', '🎀', '💜', '🌈', '🍓', '🐶', '🦋'];
+    const levels = [[0, '😺 Kitty'], [10, '🐱 Cat Lover'], [30, '🐼 Panda Fan'], [60, '🌸 Sakura Queen'], [100, '⭐ Kawaii Star'], [200, '💜 Kawaii Master'], [500, '🎀 Ultimate Kawaii']];
+    function doClick(e) {
+      clicks++;
+      playSfx('pop');
+      document.getElementById('clickScore').textContent = clicks;
+      const lvl = levels.filter(l => clicks >= l[0]).pop();
+      document.getElementById('clickLevel').textContent = lvl[1];
+      spawnFloater(e.clientX, e.clientY, ['✨', '💜', '🌸', '⭐', '💕'][Math.floor(Math.random() * 5)]);
+      // Jiggle cat image
+      const cat = document.getElementById('clickCat');
+      cat.style.transform = 'scale(1.3) rotate(-10deg)';
+      setTimeout(() => cat.style.transform = 'scale(1)', 180);
+    }
+    function resetClick() {
+      clicks = 0;
+      document.getElementById('clickScore').textContent = '0';
+      document.getElementById('clickLevel').textContent = '😺 Kitty';
+      playSfx('click');
+    }
+
+    // ============ MUSIC PLAYER (Real Audio) ============
+    const kawaiiAudio = document.getElementById('kawaiiAudio');
+    kawaiiAudio.volume = 0.25;
+
+    // Format seconds → m:ss
+    function fmtTime(s) {
+      if (isNaN(s) || s === Infinity) return '0:00';
+      const m = Math.floor(s / 60), sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    // Update progress bar & time display every animation frame
+    function updateProgress() {
+      const audio = kawaiiAudio;
+      if (!audio.paused && audio.duration) {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('currentTime').textContent = fmtTime(audio.currentTime);
+      }
+      requestAnimationFrame(updateProgress);
+    }
+    requestAnimationFrame(updateProgress);
+
+    // Set total duration once metadata loads
+    kawaiiAudio.addEventListener('loadedmetadata', () => {
+      document.getElementById('totalTime').textContent = fmtTime(kawaiiAudio.duration);
+    });
+
+    // Play / Pause toggle
+    function togglePlayerPlay() {
+      const btn = document.getElementById('playPauseBtn');
+      const disc = document.getElementById('vinylDisc');
+      if (kawaiiAudio.paused) {
+        kawaiiAudio.play().catch(() => { });
+        playerPlaying = true;
+        btn.textContent = '⏸';
+        disc.classList.add('playing');
+        playSfx('chime');
+      } else {
+        kawaiiAudio.pause();
+        playerPlaying = false;
+        btn.textContent = '▶';
+        disc.classList.remove('playing');
+      }
+    }
+
+    // Seek by clicking the progress track
+    function seekAudio(e) {
+      const track = document.getElementById('progressTrack');
+      const rect = track.getBoundingClientRect();
+      const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      if (kawaiiAudio.duration) kawaiiAudio.currentTime = ratio * kawaiiAudio.duration;
+    }
+
+    // Rewind / Forward 10 s
+    function rewindAudio() {
+      kawaiiAudio.currentTime = Math.max(0, kawaiiAudio.currentTime - 10);
+      playSfx('click');
+    }
+    function forwardAudio() {
+      if (kawaiiAudio.duration) kawaiiAudio.currentTime = Math.min(kawaiiAudio.duration, kawaiiAudio.currentTime + 10);
+      playSfx('click');
+    }
+
+    // Volume
+    function setVolume(val) { kawaiiAudio.volume = parseFloat(val); }
+
+    // Keep legacy names so nav-sound toggle still works
+    function nextTrack() { forwardAudio(); }
+    function prevTrack() { rewindAudio(); }
+
+    // ============ MODAL ============
+    function openModal(src) {
+      const m = document.getElementById('photoModal');
+      document.getElementById('modalImg').src = src;
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('photoModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ============ MOBILE MENU ============
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // ============ SCROLL REVEAL ============
+    const revEls = document.querySelectorAll('.reveal,.reveal-l,.reveal-r');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); ro.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revEls.forEach(el => ro.observe(el));
+
+    // ============ SMOOTH SCROLL ============
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Nav button sound
+    document.querySelectorAll('nav a,nav button').forEach(el => {
+      el.addEventListener('click', () => playSfx('click'));
+    });
+
+    // ============ CURSOR CLICK BURST ============
+    document.addEventListener('click', e => {
+      ['✨', '💜', '🌸'][Math.floor(Math.random() * 3)];
+      // short chime on any click
+      playSfx('click');
+    });
+  </script>
+
+</body>
+
+</html>
